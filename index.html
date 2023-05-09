@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- swiper -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <title>Happy Birthday</title>
+</head>
+
+<body>
+    <nav>
+        <p>Happy Birthday</p>
+        <div class="icons">
+            <i class='bx bx-cake'></i>
+            <i class="bx bx-music"></i>
+
+        </div>
+    </nav>
+    <main>
+        <div class="birthday-card">
+            <div class="hero">
+                <h1>
+                    They say the older you are, the smarter you become. At your age you must be a genius! Happy
+                    birthday!
+                </h1>
+            </div>
+            <div class="letter">
+                <span>Dear Semilore <div class="underline"></div></span>
+                <p>Wishing you a very happy birthday! Even though we may be miles apart, I want you to know that you are
+                    always close to my
+                    heart. You are my oldest friend, and I am grateful for every moment we have shared together. May
+                    your special day be
+                    filled with happiness, love, and wonderful surprises.
+
+                    Happy birthday again, my dear friend! I am sending you all my love and warmest wishes from afar.
+
+                    With love,
+                </p>
+                <span>From Slade <div class="underline"></div></span>
+            </div>
+            <div class="button-wrapper">
+
+                <button class="confetti-button">Hurray!!!</button>
+            </div>
+        </div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/WhatsApp Image 2023-05-07 at 14.26.04 (1).jpeg" alt="">
+                </div>
+                <div class="swiper-slide"><img src="./images/WhatsApp Image 2023-05-07 at 14.26.04.jpeg" alt=""></div>
+                <div class="swiper-slide vids">
+                    <video controls loop autoplay muted
+                        src="./images/WhatsApp Video 2023-05-07 at 14.26.06 (1).mp4"></video>
+
+                </div>
+                <div class="swiper-slide vids">
+                    <video controls loop autoplay muted
+                        src="./images/WhatsApp Video 2023-05-07 at 14.26.06.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <audio autoplay src="./「Nightcore」→_Anne-Marie_-_Birthday_(Lyrics)(256k).mp3"></audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
+            let canvas = document.createElement("canvas");
+            canvas.width = 600;
+            canvas.height = 600;
+            let container = document.getElementsByClassName("button-wrapper")[0];
+            container.appendChild(canvas);
+
+            let confetti_button = confetti.create(canvas);
+            confetti_button({
+                particleCount: 200,
+                spread: 200,
+                startVelocity: 15,
+                scalar: 0.9,
+                ticks: 90
+            }).then(() => container.removeChild(canvas));
+        });
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

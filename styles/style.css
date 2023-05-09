@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100vw;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+}
+
+nav {
+  width: 100%;
+  padding: 15px 20px;
+  height: 8vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff595e;
+  box-shadow: 0px 3px 10px 5px rgba(206, 17, 17, 0.1);
+}
+nav p,
+nav i {
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 18px;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.birthday-card {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.birthday-card .letter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+}
+.birthday-card .letter span {
+  width: auto;
+  position: relative;
+}
+
+button {
+  border: none;
+  background-color: #ff595e;
+  padding: 20px 25px;
+  color: white;
+  border-radius: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+video,
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+.swiper {
+  margin-top: 50px;
+  height: 400px;
+  width: 250px;
+}
+
+.swiper-slide {
+  width: 100px;
+  height: 100%;
+  border: 2px solid;
+  border-radius: 18px;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.confetti-button {
+  text-align: center;
+  transition: 0.3s;
+}
+
+.confetti-button:hover {
+  background: rgba(255, 89, 95, 0.6745098039);
+}
+
+.button-wrapper {
+  position: relative;
+  width: 200px;
+  height: 60px;
+}
+
+.button-wrapper canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ff595e;
+  height: 5px;
+  transition: 0.3s linear;
+  animation: move 4s infinite forwards;
+}
+
+@keyframes move {
+  0% {
+    width: 10px;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 10px;
+  }
+}
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.icons i {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  body {
+    background-image: url("../images/SL_111019_24830_68.jpg");
+  }
+  main {
+    flex-direction: row;
+    width: 100%;
+    height: 92vh;
+    justify-content: center;
+    place-items: center;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
+  main .birthday-card {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    width: 50%;
+    align-items: start;
+  }
+  main .birthday-card h1 {
+    text-align: start !important;
+  }
+  main .birthday-card p {
+    font-size: 1.2rem;
+  }
+  main .swiper {
+    width: 400px;
+    height: 600px;
+  }
+}/*# sourceMappingURL=style.css.map */
